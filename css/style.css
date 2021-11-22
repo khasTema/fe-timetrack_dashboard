@@ -4,6 +4,117 @@
 
 
 body{
-    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+    background-color: #0f1424;
     font-family: 'Rubik', sans-serif;
+    color: #f8f8f8;
+    font-weight: 400;
+    font-size: 1.125rem;
 }
+
+h1, h2{
+    font-weight: 300;
+}
+
+h1{
+    font-size: 1.7rem;
+}
+
+h2{
+    font-size: 2.3rem;
+}
+
+p{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.nav-item{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(189, 193, 255, 0.671);
+}
+
+.nav-item:hover,
+.nav-item:focus{
+    color: #f8f8f8;
+}
+
+
+img[src="images/icon-ellipsis.svg"]{
+    cursor: pointer;
+}
+
+.header{
+    background-color: #5847eb;
+}
+
+.work{
+    background-color: #ff8c66;
+}
+
+.play{
+    background-color: #56c2e6;
+}
+
+.study{
+    background-color: #ff5c7c ;
+}
+
+.exersise{
+    background-color: #4acf81;
+}
+
+.social{
+    background-color: #7536d3 ;
+}
+
+.selfcare{
+    background-color: #f1c65b;
+}
+
+
+/* ==================================
+========layout====================
+================================== */
+
+.main-grid{
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 2em;
+}
+
+
+
+.card_grid{
+    display: grid;
+    grid-template: 1fr 1fr / 100%;
+    
+    border: 1px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.background-card{
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+}
+
+.background-card img{
+    object-fit: fill;
+}
+
+.card-body_grid{
+    grid-row: 2 / 3;
+    border: 1px solid white;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+
+
+
