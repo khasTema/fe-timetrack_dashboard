@@ -82,7 +82,7 @@ img[src="images/icon-ellipsis.svg"]{
     background-color: #ff5c7c ;
 }
 
-.exersise{
+.exercise{
     background-color: #4acf81;
 }
 
@@ -104,11 +104,16 @@ img[src="images/icon-ellipsis.svg"]{
     justify-content: flex-end;
     padding-right: 1em;
     height: 50px;
-    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: -0.5em;
+   
 }
 
 .background-card img{
     height: 100%;
+    margin-top: -0.5em;
 }
 
 .main-grid{
@@ -131,12 +136,10 @@ img[src="images/icon-ellipsis.svg"]{
 }
 
 .card{
-    /* border: 1px dashed greenyellow; */
-    background-color: #1c1f4a;
     border-radius: 15px;
-    overflow: hidden;
     grid-column: 2/3;
     width: 100%;  
+    background-color: #1c1f4a;
 }
 
 .header-card{
@@ -195,12 +198,11 @@ img[src="images/icon-ellipsis.svg"]{
 }
 
 .card-body_grid{
-    /* background-color: #1c1f4a; */
-    /* border-radius: 15px; */
-    /* border: 1px dashed yellow; */
+    border-radius: 15px;
+    background-color: #1c1f4a;
     display: grid;
     grid-template-columns: 1em auto 2em auto 1em;
-    grid-template-rows: 1em auto auto 1em;
+    grid-template-rows: 1em auto auto 3em;
     grid-gap: 0.2em;
     grid-template-areas: 
         ". . . . ."
