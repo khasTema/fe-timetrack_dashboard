@@ -3,4 +3,4 @@ time tracking dashboard
 
 https://khastema.github.io/fe-timetrack_dashboard/
 
-## Buit using css grid
+## Built using css grid
