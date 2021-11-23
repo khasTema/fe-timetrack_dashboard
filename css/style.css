@@ -56,6 +56,11 @@ p{
     color: #f8f8f8;
 }
 
+.nav-item.active{
+    color: #fff;
+}
+
+
 
 img[src="images/icon-ellipsis.svg"]{
     cursor: pointer;
@@ -190,6 +195,9 @@ img[src="images/icon-ellipsis.svg"]{
 }
 
 .card-body_grid{
+    /* background-color: #1c1f4a; */
+    /* border-radius: 15px; */
+    /* border: 1px dashed yellow; */
     display: grid;
     grid-template-columns: 1em auto 2em auto 1em;
     grid-template-rows: 1em auto auto 1em;
