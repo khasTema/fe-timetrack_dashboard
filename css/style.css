@@ -11,6 +11,16 @@ body{
     color: #f8f8f8;
     font-weight: 400;
     font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,
+h2, 
+h3{
+    margin: 0;
 }
 
 h1, h2{
@@ -25,9 +35,14 @@ h2{
     font-size: 2.3rem;
 }
 
+h3{
+    font-size: 1.1rem;
+}
+
 p{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.699);
+    margin: 0 0 0.5em;
 }
 
 .nav-item{
@@ -47,7 +62,7 @@ img[src="images/icon-ellipsis.svg"]{
 }
 
 .header{
-    background-color: #5847eb;
+    background-color: rgb(111, 118, 200);
 }
 
 .work{
@@ -79,42 +94,165 @@ img[src="images/icon-ellipsis.svg"]{
 ========layout====================
 ================================== */
 
-.main-grid{
-    width: 90%;
-    max-width: 1000px;
-    margin: 50px auto;
-    display: grid;
-    grid-gap: 2em;
-}
-
-
-
-.card_grid{
-    display: grid;
-    grid-template: 1fr 1fr / 100%;
-    
-    border: 1px solid white;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
 .background-card{
-    grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
     padding-right: 1em;
+    height: 50px;
+    object-fit: cover;
 }
 
 .background-card img{
-    object-fit: fill;
+    height: 100%;
+}
+
+.main-grid{
+    width: 100%;
+    max-width: 1020px;
+    margin: 10% auto;
+    /* border: 1px dashed red; */
+    display: grid;
+    grid-template-columns: 0px auto 0px;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-gap: 1em;
+    grid-template-areas: 
+        " . header . "
+        " . card1 . "
+        " . card2 . "
+        " . card3 . "
+        " . card4 . "
+        " . card5 . "
+        " . card6 . "; 
+}
+
+.card{
+    /* border: 1px dashed greenyellow; */
+    background-color: #1c1f4a;
+    border-radius: 15px;
+    overflow: hidden;
+    grid-column: 2/3;
+    width: 100%;  
+}
+
+.header-card{
+    grid-area: header;
+}
+
+.card1{
+    grid-area: card1;
+}
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
+}
+
+.card4{
+    grid-area: card4;
+}
+
+.card5{
+    grid-area: card5;
+}
+
+.card6{
+    grid-area: card6;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0.5em;
+    border-radius: 15px; 
+}
+
+.header-userpic{
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+}
+
+.header-userpic img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-card_nav{
+    padding: 1.5em 1.3em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-body_grid{
-    grid-row: 2 / 3;
-    border: 1px solid white;
-    background-color: hsl(235, 46%, 20%);
-    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1em auto 2em auto 1em;
+    grid-template-rows: 1em auto auto 1em;
+    grid-gap: 0.2em;
+    grid-template-areas: 
+        ". . . . ."
+        ". heading . dots . "
+        ". hours . last ."
+        ". . . . .";
+       
+}
+
+.card-body_grid h3{
+    grid-area: heading;
+}
+
+.card-body_grid img{
+    grid-area: dots;
+    align-self: center;
+    justify-self: end;
+}
+
+.card-body_grid h2{
+    grid-area: hours;
+}
+
+.card-body_grid p{
+    grid-area: last;
+    align-self: center;
+    justify-self: end;
 }
 
 
-
+@media (min-width: 800px){
+    .main-grid{
+        grid-template-columns: 1em 13em auto auto auto 1em;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            ". header card1 card2 card3 ."
+            ". header card4 card5 card6.";
+    }
+    .header,
+    .header-card_nav{
+        padding-left: 2em;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .header-userpic{
+        margin-bottom: 1.5em;
+    }
+    .nav-item{
+        margin-bottom: 0.8em;
+    }
+    .card-body_grid{
+        grid-gap: 0.5em;
+        grid-template-areas: 
+            ". . . . ."
+            ". heading . dots . "
+            ". hours . . ."
+            ". last last . .";
+    }
+    .card-body_grid p{
+        justify-self: start;
+    }
+}
