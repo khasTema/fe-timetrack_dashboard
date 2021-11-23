@@ -120,7 +120,6 @@ img[src="images/icon-ellipsis.svg"]{
     width: 100%;
     max-width: 1020px;
     margin: 10% auto;
-    /* border: 1px dashed red; */
     display: grid;
     grid-template-columns: 0px auto 0px;
     grid-template-rows: auto auto auto auto auto auto auto;
@@ -265,4 +264,13 @@ img[src="images/icon-ellipsis.svg"]{
     .card-body_grid p{
         justify-self: start;
     }
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(64, 100%, 66%); 
 }
