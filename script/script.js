@@ -15,18 +15,11 @@ navArr.forEach(function(e){
 
 
 async function getData(timeframe){
-    console.log(timeframe)
-
     let response = await fetch("script/data.json")
     let data = await response.json()
     for (item of data){
         let hrsData =  item.timeframes[timeframe]
-
-        console.log(item.timeframes)
-        
         let cardTitle = item.title
-
-        console.log(cardTitle)
         for (card of cardArr){
             let h3_CurrentData = card.children[2].children[0]
             let p_PreviousData = card.children[3].children[0]
